@@ -12,11 +12,8 @@ class LoginPageGuru extends StatefulWidget {
 
 class _LoginPageState extends State<LoginPageGuru> {
   var title;
-
   var key;
-
   Duration get loginTime => const Duration(milliseconds: 2250);
-
   get users => null;
 
   Future<String> _authUserSignUp(LoginData data) {
@@ -71,7 +68,6 @@ class _LoginPageState extends State<LoginPageGuru> {
   @override
   Widget build(BuildContext context) {
     return FlutterLogin(
-      title: 'Silakan Masukkan Akun Anda',
       logo: 'assets/images/REL1.png',
       onLogin: _authUserLogin,
       onSignup: _authUserSignUp,

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ruang_edukasi_listrik/screen/guru/login_guru_screen.dart';
-import 'package:ruang_edukasi_listrik/screen/start_screen.dart';
+import 'package:ruang_edukasi_listrik/screen/sidebar/profile.dart';
 
 class UserScreen extends StatelessWidget {
   const UserScreen({Key? key}) : super(key: key);
@@ -35,10 +35,8 @@ class UserScreen extends StatelessWidget {
                     minWidth: double.infinity,
                     height: 60,
                     onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => StartScreen()));
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Profile()));
                     },
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(50)),

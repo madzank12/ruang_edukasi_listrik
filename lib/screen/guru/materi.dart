@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ruang_edukasi_listrik/screen/components/button_home.dart';
+import 'package:ruang_edukasi_listrik/screen/components/button_menu.dart';
+import 'package:ruang_edukasi_listrik/screen/components/image_background.dart';
 
 class Materi extends StatelessWidget {
   const Materi({Key? key}) : super(key: key);
@@ -21,42 +23,12 @@ class Materi extends StatelessWidget {
                     width: 70,
                     child: Image.asset('assets/images/REL1.png'),
                   ),
+                  ImageBackground(),
+                  ButtonMenu(context, 'Upload Materi', Materi()),
                   SizedBox(
                     height: 10,
                   ),
-                  MaterialButton(
-                    color: Colors.blue[900],
-                    minWidth: double.infinity,
-                    height: 60,
-                    onPressed: () {},
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(50)),
-                    child: Text(
-                      "UPLOAD MATERI",
-                      style: TextStyle(
-                        fontSize: 18,
-                        color: Colors.white,
-                      ),
-                    ),
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  MaterialButton(
-                    color: Colors.blue[900],
-                    minWidth: double.infinity,
-                    height: 60,
-                    onPressed: () {},
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(50)),
-                    child: Text(
-                      "LIHAT MATERI",
-                      style: TextStyle(
-                        fontSize: 18,
-                        color: Colors.white,
-                      ),
-                    ),
-                  ),
+                  ButtonMenu(context, 'LIHAT MATERI', Materi()),
                 ],
               ),
               ButtonHome(context),

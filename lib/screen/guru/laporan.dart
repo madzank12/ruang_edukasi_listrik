@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:ruang_edukasi_listrik/screen/components/button_home.dart';
+import 'package:ruang_edukasi_listrik/screen/components/button_menu.dart';
+import 'package:ruang_edukasi_listrik/screen/components/image_background.dart';
+import 'package:ruang_edukasi_listrik/screen/guru/materi.dart';
 
 class Laporan extends StatelessWidget {
   const Laporan({Key? key}) : super(key: key);
@@ -21,24 +24,8 @@ class Laporan extends StatelessWidget {
                     width: 70,
                     child: Image.asset('assets/images/REL1.png'),
                   ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  MaterialButton(
-                    color: Colors.blue[900],
-                    minWidth: double.infinity,
-                    height: 60,
-                    onPressed: () {},
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(50)),
-                    child: Text(
-                      "LAPORAN",
-                      style: TextStyle(
-                        fontSize: 18,
-                        color: Colors.white,
-                      ),
-                    ),
-                  ),
+                  ImageBackground(),
+                  ButtonMenu(context, 'LAPORAN', Materi()),
                 ],
               ),
               ButtonHome(context),
