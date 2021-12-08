@@ -1,5 +1,5 @@
+// @dart=2.9
 import 'package:flutter/material.dart';
-import 'package:ruang_edukasi_listrik/screen/start_screen.dart';
 import 'package:ruang_edukasi_listrik/screen/splash_screen.dart';
 
 void main() {
@@ -7,13 +7,16 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({Key key}) : super(key: key);
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primaryColor: Colors.lightBlue[800],
+        backgroundColor: Colors.amber,
+      ),
       home: SplashScreen(),
     );
   }

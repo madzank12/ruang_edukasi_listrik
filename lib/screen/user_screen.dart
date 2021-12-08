@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ruang_edukasi_listrik/screen/login_guru_screen.dart';
+import 'package:ruang_edukasi_listrik/screen/guru/login_guru_screen.dart';
 import 'package:ruang_edukasi_listrik/screen/start_screen.dart';
 
 class UserScreen extends StatelessWidget {
@@ -10,7 +10,6 @@ class UserScreen extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Container(
-          color: Colors.blue,
           padding: EdgeInsets.symmetric(horizontal: 30, vertical: 10),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -45,7 +44,10 @@ class UserScreen extends StatelessWidget {
                         borderRadius: BorderRadius.circular(50)),
                     child: Text(
                       "Siswa",
-                      style: TextStyle(fontSize: 18),
+                      style: TextStyle(
+                        fontSize: 18,
+                        color: Colors.white,
+                      ),
                     ),
                   ),
                   SizedBox(height: 20),

@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'package:ruang_edukasi_listrik/screen/login_guru_screen.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({required Key key, required this.title}) : super(key: key);
@@ -22,7 +20,6 @@ class _MyHomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    var display1;
     return new Scaffold(
       appBar: new AppBar(
         title: new Text(widget.title),

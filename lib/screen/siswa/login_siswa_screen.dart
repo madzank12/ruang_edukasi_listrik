@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+// ignore: import_of_legacy_library_into_null_safe
 import 'package:flutter_login/flutter_login.dart';
 import 'package:provider/provider.dart';
 import 'package:ruang_edukasi_listrik/screen/home_page.dart';
 
-import '../providers/auth.dart';
+import '../../providers/auth.dart';
 
 class LoginPage extends StatefulWidget {
   @override

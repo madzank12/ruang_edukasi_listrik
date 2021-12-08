@@ -1,11 +1,9 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
+// ignore: import_of_legacy_library_into_null_safe
 import 'package:flutter_login/flutter_login.dart';
 import 'package:provider/provider.dart';
-
-import '../providers/auth.dart';
-import './home_page.dart';
+import 'package:ruang_edukasi_listrik/screen/guru/dashboard_guru.dart';
+import '../../providers/auth.dart';
 
 class LoginPageGuru extends StatefulWidget {
   @override
@@ -31,21 +29,21 @@ class _LoginPageState extends State<LoginPageGuru> {
         return err.toString();
       }
 
-      return null!;
+      return '';
     });
   }
 
   Future<String> _authUserLogin(LoginData data) {
-    print('Name: ${data.name}, Password: ${data.password}');
+    // print('Name: ${data.name}, Password: ${data.password}');
     return Future.delayed(loginTime).then((_) async {
-      try {
-        await Provider.of<Auth>(context, listen: false)
-            .login(data.name, data.password);
-      } catch (err) {
-        return err.toString();
-      }
+      // try {
+      //   await Provider.of<Auth>(context, listen: false)
+      //       .login(data.name, data.password);
+      // } catch (err) {
+      //   return err.toString();
+      // }
 
-      return null!;
+      return '';
     });
   }
 
@@ -55,7 +53,7 @@ class _LoginPageState extends State<LoginPageGuru> {
       if (!users.containsKey(name)) {
         return 'Username not exists';
       }
-      return null!;
+      return '';
     });
   }
 
@@ -66,7 +64,7 @@ class _LoginPageState extends State<LoginPageGuru> {
       if (!users.containsKey(name)) {
         return 'Username not exists';
       }
-      return null!;
+      return '';
     });
   }
 
@@ -79,7 +77,7 @@ class _LoginPageState extends State<LoginPageGuru> {
       onSignup: _authUserSignUp,
       onSubmitAnimationCompleted: () {
         Navigator.of(context).pushReplacement(MaterialPageRoute(
-          builder: (context) => HomePage(key: key, title: title),
+          builder: (context) => DashboardGuru(key: key),
         ));
       },
       onRecoverPassword: _recoverPassword,
